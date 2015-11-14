@@ -1,0 +1,6 @@
+#Fix Rewrite
+Options -Multiviews
+
+RewriteEngine on
+RewriteRule ^contact/?$ index.php [L]
+RewriteRule ^contact/apply/?$ index.php [L]

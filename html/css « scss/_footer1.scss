@@ -1,0 +1,33 @@
+footer{
+	width:100%;
+	max-width:1200px;
+	margin:20px auto;
+	font-family:$helvetica;
+	font-size:.8em;
+	padding:0 20px;
+	box-sizing:border-box;
+	color:#777;
+	a{
+		color:$rsd_red;
+		text-decoration:none;
+	}
+	p{
+		margin-top:.5em;
+	}
+	div.p{
+		margin-top:.5em;
+		line-height:1.5;
+		h1{
+			display:inline;
+			font-family:$helvetica;
+			font-size:1em;
+			margin:0;
+			padding:0;
+			a{
+				color:#777;
+				text-decoration:none;
+			}
+		}
+	}
+}
+

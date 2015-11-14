@@ -1,0 +1,154 @@
+@font-face {
+  font-family: 'Josefin Slab';
+  font-style: normal;
+  font-weight: 400;
+  src: url(http://themes.googleusercontent.com/static/fonts/josefinslab/v3/46aYWdgz-1oFX11flmyEfXZ2MAKAc2x4R1uOSeegc5U.eot);
+  src: local('Josefin Slab'), local('JosefinSlab'), url(http://themes.googleusercontent.com/static/fonts/josefinslab/v3/46aYWdgz-1oFX11flmyEfXZ2MAKAc2x4R1uOSeegc5U.eot) format('embedded-opentype'), url(http://themes.googleusercontent.com/static/fonts/josefinslab/v3/46aYWdgz-1oFX11flmyEfXhCUOGz7vYGh680lGh-uXM.woff) format('woff'); 
+}
+/*@font-face {
+  font-family: 'Spinnaker';
+  font-style: normal;
+  font-weight: 400;
+  src: url(http://themes.googleusercontent.com/static/fonts/spinnaker/v5/WxzDAY6mC9v3znSJEtCoW_Y6323mHUZFJMgTvxaG2iE.eot);
+  src: local('Spinnaker'), local('Spinnaker-Regular'), url(http://themes.googleusercontent.com/static/fonts/spinnaker/v5/WxzDAY6mC9v3znSJEtCoW_Y6323mHUZFJMgTvxaG2iE.eot) format('embedded-opentype'), url(http://themes.googleusercontent.com/static/fonts/spinnaker/v5/WxzDAY6mC9v3znSJEtCoWz8E0i7KZn-EPnyo3HZu7kw.woff) format('woff');
+}*/
+/*@font-face {
+    font-family: 'Josefin Slab';
+    src: url('josefinslab-regular-webfont.eot');
+    src: url('josefinslab-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('josefinslab-regular-webfont.woff') format('woff'),
+         url('josefinslab-regular-webfont.ttf') format('truetype'),
+         url('josefinslab-regular-webfont.svg#josefin_slabregular') format('svg');
+    font-weight: 400;
+    font-style: normal;
+
+}*/
+@font-face {
+    font-family: 'Spinnaker';
+    src: url('spinnaker-regular-webfont.eot');
+    src: url('spinnaker-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('spinnaker-regular-webfont.woff') format('woff'),
+         url('spinnaker-regular-webfont.ttf') format('truetype'),
+         url('spinnaker-regular-webfont.svg#spinnakerregular') format('svg');
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+$font1:'Spinnaker';
+
+.font1{
+	font-family: $font1, $helvetica;
+}
+
+$font2:'Josefin Slab';
+
+.font2{
+	font-family: $font2, $helvetica;
+}
+
+
+@mixin standardTrans{
+	@include transition (all .50s ease-in-out);
+}
+@mixin quickTrans{
+	@include transition (all .30s ease-in-out);
+}
+
+
+
+body{
+	background-image: url('/img/ecailles.png');
+}
+
+html{
+	font-family: $font1, $helvetica;
+}
+
+.color1{
+	color:$rsd_red;
+}
+
+h1{
+	font-family: $font2;
+	font-size:2.5em;
+}
+
+.holder{
+	width:100%;
+	max-width:1200px;
+	box-sizing:border-box;
+	margin:20px auto;
+	padding:20px;
+	background-color:white;
+	border-top:1px solid lighten($rsd_red, 50%);
+	border-bottom:1px solid lighten($rsd_red, 50%);
+}
+
+p{
+	line-height:1.5;
+	margin-top:1em;
+	&.j{
+		text-align:justify;
+	}
+	&.first{
+		margin-top:0;
+	}
+}
+
+.bi-bar{
+	@include clearfix;
+	div.bi{
+		float:left;
+		width:50%;
+	}
+}
+
+.extra-top{
+	margin-top:20px;
+}
+
+
+
+
+.stop-scroll{
+    overflow: hidden;
+}
+
+#fullscreenload{
+	display:none;
+	z-index:1001;
+	span{
+		display: block;
+		position: fixed;
+		top: 0%;
+		left: 0%;
+		width: 100%;
+		height: 100%;
+		background-color: white;
+		z-index:1002;
+		-moz-opacity: 0.7;
+		opacity:.70;
+		filter: alpha(opacity=70);
+	}
+	img{
+		display: block;
+		position: fixed;
+		top: 50%;
+		left: 50%;
+		width: 80px;
+		height: 80px;
+		margin: -40px 0 0 -40px;
+		z-index:1003;
+	}
+}
+
+
+/* RETINA OVERRIDES */
+@media only screen and (-webkit-min-device-pixel-ratio: 2), 
+only screen and (min-device-pixel-ratio: 2) {
+	body{
+		background-image: url('/img/ecailles@2x.png');
+		background-size: 48px 20px;
+	}
+}

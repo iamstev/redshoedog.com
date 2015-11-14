@@ -1,0 +1,239 @@
+.two-thirds-pic{
+	@include clearfix;
+	margin:20px 0;
+	position:relative;
+	.l{
+		width:100%;
+		box-sizing:border-box;
+		padding:0 400px 0 0;
+		min-height:300px;
+	}
+	.r{
+		position:absolute;
+		top:0;
+		right:0;
+		width:400px;
+		box-sizing:border-box;
+		padding:0 0 0 20px;
+		max-width:400px;
+		figure{
+			width:100%;
+			height:300px;
+			background-image:url('/img/steve1.jpg');
+			background-position:0 0;
+			border-radius:5px
+		}
+	}
+}
+.bi{
+	@include clearfix;
+	margin:20px 0;
+	&.linetop{
+		margin: 20px -20px;
+		padding:20px 20px 0 20px;
+		border-top:1px dashed lighten($rsd_red, 50%);
+	}
+	.l{
+		width:50%;
+		float:left;
+		box-sizing:border-box;
+		padding-right:20px;
+		border-right:1px dashed tint($rsd_red, 90%);
+	}
+	.r{
+		width:50%;
+		float:left;
+		box-sizing:border-box;
+		padding-left:20px;
+	}
+	div.hgroup{
+		h2{
+			font-family: 'Josefin Slab';
+			font-size:1.5em;
+		}
+		&.covered{
+			background-color:black;
+			padding:10em 0 0 0;
+			color:white;
+			border-radius:5px;
+			background-size: cover;
+			-moz-background-size: cover;
+			background-position: center;
+			background-position-x: 50%;
+			background-position-y: 50%;
+			h2{
+				padding:2em 1em 0 1em;
+				border-bottom:none;
+				border-radius:0 0 5px 5px;
+				filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#e6000000',GradientType=0 ); /* IE6-9 */
+				@include linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.6) 30%,rgba(0,0,0,0.9) 100%);
+				color:white;
+			}
+		}
+	}	
+}
+
+ul.tri-bar{
+	@include clearfix;
+	font-family: 'Josefin Slab';
+	font-size:2em;
+	li{
+		float:left;
+		width:33%;
+		text-align:center;
+		a:link, a:visited{
+			text-decoration:none;
+			color:black;
+		}
+		a:hover{
+			text-decoration:none;
+		}
+	}
+}
+
+.list-2col{
+	@include clearfix;
+	&.linetop{
+		margin: 20px -20px;
+		padding:20px 20px 0 20px;
+		border-top:1px dashed lighten($rsd_red, 50%);
+	}
+	h2{
+		font-family: 'Josefin Slab';
+		font-size:1.5em;
+	}
+	ul{
+		margin:0 -20px;
+		li{
+			float:left;
+			width:50%;
+			box-sizing:border-box;
+			padding: 20px 20px 0 20px;
+			line-height:1.5;
+			&:nth-child(odd){
+				float:left;
+				clear:both;
+			}
+			&:nth-child(even){
+				float:right;
+			}
+		}
+	}
+}
+
+
+
+@media screen and (max-width:800px){
+	.two-thirds-pic{
+		.l{
+			width:50%;
+			padding:0 20px 0 0;
+		}
+		.r{
+			width:50%;
+			padding:0;
+			figure{
+				padding-top:75%;
+				height:0;
+				background-size:cover;
+			}
+		}
+	}
+	ul.tri-bar{
+		font-size:1.5em;
+	}
+}
+@media screen and (max-width:600px){
+	.two-thirds-pic{
+		.l{
+			width:100%;
+			padding:0;
+		}
+		.r{
+			position: relative;
+			width:100%;
+			margin:0 auto;
+			figure{
+				padding-top:75%;
+				height:0;
+				background-size:cover;
+			}
+		}
+	}
+	.bi{
+		.l{
+			width:100%;
+			float:none;
+			padding-right:0;
+			border-right:none;
+		}
+		.r{
+			width:100%;
+			float:none;
+			padding-left:0;
+			margin-top:40px;
+		}
+		hgroup{
+			h2{
+				font-size:1.5em;
+			}	
+		}
+	}
+	ul.tri-bar{
+		font-size:2em;
+		margin: 0 -20px;
+		padding:0;
+		li{
+			float:none;
+			width:100%;
+			text-align:left;
+			padding:10px 20px;
+			margin-bottom:10px;
+			border-bottom:1px dashed lighten($rsd_red, 50%);
+		}
+	}
+	.list-2col{
+		ul{
+			margin:0;
+			li{
+				float:left;
+				width:100%;
+				box-sizing:border-box;
+				padding:20px 0 0 0;
+				line-height:1.5;
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+			
+			
+				
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+p.sig{
+	text-align:right;
+	span{
+		font-size:.75em;
+		color:#333;
+	}
+}
